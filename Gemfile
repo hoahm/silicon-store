@@ -45,3 +45,6 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+# HTML Abstraction Markup Language
+gem 'haml', '~> 4.0.5'

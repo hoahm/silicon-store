@@ -1,0 +1,22 @@
+!!!
+%html{lang: "en"}
+  %head
+    %meta{charset: "utf-8"}/
+    %meta{content: "IE=edge", "http-equiv" => "X-UA-Compatible"}/
+    %meta{content: "width=device-width, initial-scale=1", name: "viewport"}/
+    %meta{content: "", name: "description"}/
+    %meta{content: "", name: "author"}/
+    %title Silicon Straits Saigon Store
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+    /[if lt IE 9]
+      = javascript_include_tag "ie/html5shiv.min.js"
+      = javascript_include_tag "ie/respond.min.js"
+  %body
+    = render "layouts/header"
+    .container-fluid.wrapper
+      .row
+        = render "layouts/message"
+        = yield
+    = render "layouts/footer"

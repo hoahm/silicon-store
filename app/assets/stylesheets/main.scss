@@ -1,0 +1,47 @@
+html, body {
+  height: 100%;
+  min-height: 100%;
+}
+
+/**
+ * =================================
+ * HEADER
+ */
+header {
+  background: #00AADF !important;
+  color: #fff !important;
+  a, a:visited {
+    color: #fff !important;
+  }
+  ul.dropdown-menu {
+    li {
+      a, a:visited {
+        color: #777 !important;
+      }
+    }
+  }
+}
+
+/**
+ * =================================
+ * FOOTER
+ */
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 0;
+  background: #f5f5f5;
+  font-size: 12px;
+}
+
+/**
+ * =================================
+ * COMMONS
+ */
+.wrapper {
+  height: 100%;
+  min-height: 100%;
+  position: relative;
+  padding-top: 50px;
+}

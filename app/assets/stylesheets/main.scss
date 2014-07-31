@@ -45,3 +45,21 @@ footer {
   position: relative;
   padding-top: 50px;
 }
+.border-form-div {
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  margin: 0 auto 20px;
+  padding: 19px 29px 29px;
+  width: 400px;
+  margin: 20px auto auto auto;
+}
+ul.custom-error {
+  list-style: none;
+  list-style-type: none;
+}
+.error {
+  color: #a94442;
+  font-weight: normal;
+}

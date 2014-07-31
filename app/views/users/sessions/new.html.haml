@@ -1,0 +1,16 @@
+.border-form-div
+  %h2= t("common.sign_in")
+  = form_for(resource, as: resource_name, url: session_path(resource_name), html: {id: "sign_in_form"}) do |f|
+    .form-group
+      = f.label t(".email")
+      = f.email_field :email, class: "form-control", placeholder: t(".email_placeholder"), autofocus: true, required: true
+    .form-group
+      = f.label t(".password")
+      = f.password_field :password, class: "form-control", placeholder: t(".password_placeholder"), required: true, autocomplete: :off
+    - if devise_mapping.rememberable?
+      %div
+        = f.check_box :remember_me
+        = f.label t(".remember_me")
+    = f.submit t("common.sign_in"), class: "btn btn-primary"
+
+  = render "users/shared/links"

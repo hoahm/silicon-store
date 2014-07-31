@@ -46,5 +46,15 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+group :development, :test do
+  gem 'mailcatcher'
+end
+
 # HTML Abstraction Markup Language
 gem 'haml', '~> 4.0.5'
+
+# Authentication for Rails
+gem 'devise'
+
+# Momentjs
+gem 'momentjs-rails'

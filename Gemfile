@@ -21,7 +21,7 @@ gem 'coffee-rails', '~> 4.0.0'
 # gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
-gem 'jquery-rails'
+gem 'jquery-rails', '>= 3.1.1'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
@@ -47,14 +47,20 @@ end
 # gem 'debugger', group: [:development, :test]
 
 group :development, :test do
-  gem 'mailcatcher'
+  gem 'mailcatcher', '0.2.4'
+  gem 'rspec-rails', '3.0.2'
+  gem 'factory_girl_rails', '4.4.1'
+  gem 'shoulda-matchers', '2.6.2'
+  gem 'faker', '1.4.2'
+  gem 'database_cleaner', '1.3.0'
+  gem 'capybara', '2.4.1'
 end
 
 # HTML Abstraction Markup Language
 gem 'haml', '~> 4.0.5'
 
 # Authentication for Rails
-gem 'devise'
+gem 'devise', '3.2.4'
 
 # Momentjs
-gem 'momentjs-rails'
+gem 'momentjs-rails', '2.7.0'

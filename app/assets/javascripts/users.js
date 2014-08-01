@@ -1,5 +1,26 @@
 $(function(){
 
+  if ($("#sign_in_form").length > 0){
+    $("#sign_in_form").validate({
+      rules: {
+        "user[email]": {
+          required: true
+        },
+        "user[password]": {
+          required: true
+        }
+      },
+      messages: {
+        "user[email]": {
+          required: "Please input your email"
+        },
+        "user[password]": {
+          required: "Please input your password"
+        }
+      }
+    });
+  }
+
   if ($("#sign_up_form").length > 0){
     $("#sign_up_form").validate({
       rules: {

@@ -1,8 +1,9 @@
 html, body {
   height: 100%;
+}
+body {
   min-height: 100%;
 }
-
 /**
  * =================================
  * HEADER
@@ -30,7 +31,7 @@ footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  padding: 10px 0;
+  padding: 11px 0;
   background: #f5f5f5;
   font-size: 12px;
 }
@@ -40,10 +41,14 @@ footer {
  * COMMONS
  */
 .wrapper {
-  height: 100%;
   min-height: 100%;
   position: relative;
+}
+.content-wrapper {
   padding-top: 50px;
+  padding-bottom: 60px;
+  position: relative;
+  min-height: 100%;
 }
 .border-form-div {
   background-color: #ffffff;
@@ -58,6 +63,7 @@ footer {
 ul.custom-error {
   list-style: none;
   list-style-type: none;
+  padding-left: 0;
 }
 .error {
   color: #a94442;

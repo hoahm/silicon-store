@@ -14,9 +14,10 @@
       = javascript_include_tag "ie/html5shiv.min.js"
       = javascript_include_tag "ie/respond.min.js"
   %body
-    = render "layouts/header"
-    .container-fluid.wrapper
-      .row
-        = render "layouts/message"
-        = yield
-    = render "layouts/footer"
+    .wrapper
+      = render "layouts/header"
+      .container-fluid.content-wrapper
+        .row
+          = render "layouts/message"
+          = yield
+      = render "layouts/footer"

@@ -1,6 +1,6 @@
 .border-form-div
   %h2= t("common.sign_in")
-  = form_for(resource, as: resource_name, url: session_path(resource_name), html: {id: "sign_in_form"}) do |f|
+  = form_for(resource, as: resource_name, url: session_path(resource_name), html: {id: "sign_in_form", novalidate: true}) do |f|
     .form-group
       = f.label t(".email")
       = f.email_field :email, class: "form-control", placeholder: t(".email_placeholder"), autofocus: true, required: true

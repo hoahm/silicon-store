@@ -10,3 +10,9 @@
       %span{"aria-hidden" => "true"} ×
       %span.sr-only Close
     = content_tag :div, simple_format(flash[:error])
+- if flash[:alert]
+  .alert.alert-warning.alert-dismissible{role: "alert"}
+    %button.close{"data-dismiss" => "alert", type: "button"}
+      %span{"aria-hidden" => "true"} ×
+      %span.sr-only Close
+    = content_tag :div, simple_format(flash[:alert])

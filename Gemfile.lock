@@ -142,6 +142,7 @@ GEM
     rdoc (4.1.1)
       json (~> 1.4)
     remotipart (1.2.1)
+    rolify (3.4.0)
     rspec-core (3.0.3)
       rspec-support (~> 3.0.0)
     rspec-expectations (3.0.3)
@@ -228,6 +229,7 @@ DEPENDENCIES
   mysql2
   rails (= 4.0.4)
   rails_admin (= 0.6.2)
+  rolify (= 3.4.0)
   rspec-rails (= 3.0.2)
   sass-rails (~> 4.0.2)
   sdoc

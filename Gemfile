@@ -67,3 +67,6 @@ gem 'momentjs-rails', '2.7.0'
 
 # Rails engine that provides an easy-to-use interface for managing your data
 gem 'rails_admin', '0.6.2'
+
+# Role management library with resource scoping
+gem "rolify", '3.4.0'

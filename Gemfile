@@ -73,3 +73,6 @@ gem "rolify", '3.4.0'
 
 # Authorization Gem for Ruby on Rails.
 gem "cancan", '1.6.10'
+
+# Track changes to your models' data for auditing or versioning
+gem 'paper_trail', '3.0.3'

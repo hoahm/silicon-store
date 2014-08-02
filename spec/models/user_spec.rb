@@ -49,4 +49,20 @@ RSpec.describe User, :type => :model do
       end
     end
   end
+
+  context "Callbacks" do
+    before(:each) do
+      @user = FactoryGirl.create(:user)
+    end
+
+    describe "add_default_role" do
+      it "is defined" do
+        expect(@user).to respond_to(:add_default_role)
+      end
+
+      it "should trigger 'add_default_role' after create" do
+        expect(@user.has_role? :member).to eq(true)
+      end
+    end
+  end
 end

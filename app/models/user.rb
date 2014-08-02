@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
   rolify
+  has_paper_trail
+
   # Include default devise modules. Others available are:
   # :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -19,10 +21,10 @@ class User < ActiveRecord::Base
   end
 
   def normalize_data
-    self.first_name = self.first_name.strip
-    self.last_name = self.last_name.strip
-    self.email = self.email.downcase.strip
-    self.mobile.strip
+    self.first_name = self.first_name.strip if self.first_name.present?
+    self.last_name = self.last_name.strip if self.last_name.present?
+    self.email = self.email.downcase.strip if self.email.present?
+    self.mobile = self.mobile.strip if self.mobile.present?
   end
 
   def add_default_role

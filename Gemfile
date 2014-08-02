@@ -70,3 +70,6 @@ gem 'rails_admin', '0.6.2'
 
 # Role management library with resource scoping
 gem "rolify", '3.4.0'
+
+# Authorization Gem for Ruby on Rails.
+gem "cancan", '1.6.10'

@@ -1,0 +1,12 @@
+development:
+  facebook:
+    app_id: ""
+    app_secret: ""
+test:
+  facebook:
+    app_id: ""
+    app_secret: ""
+production:
+  facebook:
+    app_id: ""
+    app_secret: ""

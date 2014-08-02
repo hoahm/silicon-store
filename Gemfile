@@ -64,3 +64,9 @@ gem 'devise', '3.2.4'
 
 # Momentjs
 gem 'momentjs-rails', '2.7.0'
+
+# Facebook OAuth2 Strategy for OmniAuth
+gem 'omniauth-facebook', '1.6.0'
+
+# Simple Rails app configuration
+gem "figaro", '0.7.0'

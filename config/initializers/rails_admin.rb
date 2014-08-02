@@ -1,20 +1,7 @@
 RailsAdmin.config do |config|
 
-  ### Popular gems integration
-
-  ## == Devise ==
-  # config.authenticate_with do
-  #   warden.authenticate! scope: :user
-  # end
-  # config.current_user_method(&:current_user)
-
-  ## == Cancan ==
-  # config.authorize_with :cancan
-
-  ## == PaperTrail ==
-  # config.audit_with :paper_trail, 'User', 'PaperTrail::Version' # PaperTrail >= 3.0.0
-
-  ### More at https://github.com/sferik/rails_admin/wiki/Base-configuration
+  config.authorize_with :cancan
+  config.current_user_method(&:current_user)
 
   config.actions do
     dashboard                     # mandatory
@@ -31,4 +18,6 @@ RailsAdmin.config do |config|
     # history_index
     # history_show
   end
+
+  config.main_app_name = ["Silicon Straits Saigon Store", "ACP"]
 end

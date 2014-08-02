@@ -76,3 +76,6 @@ gem "cancan", '1.6.10'
 
 # Track changes to your models' data for auditing or versioning
 gem 'paper_trail', '3.0.3'
+
+# Easy file attachment management
+gem 'paperclip', '4.2.0'

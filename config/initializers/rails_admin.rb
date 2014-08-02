@@ -20,4 +20,7 @@ RailsAdmin.config do |config|
   config.main_app_name = ["Silicon Straits Saigon Store", "ACP"]
 
   config.audit_with :paper_trail, 'User', 'PaperTrail::Version'
+  config.audit_with :paper_trail, 'Vendor', 'PaperTrail::Version'
+  config.audit_with :paper_trail, 'Category', 'PaperTrail::Version'
+  config.audit_with :paper_trail, 'Item', 'PaperTrail::Version'
 end

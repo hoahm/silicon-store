@@ -11,7 +11,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140802155341) do
+ActiveRecord::Schema.define(version: 20140802163924) do
+
+  create_table "categories", force: true do |t|
+    t.string   "name"
+    t.integer  "vendor_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "categories", ["vendor_id"], name: "index_categories_on_vendor_id", using: :btree
+
+  create_table "items", force: true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.string   "sku"
+    t.integer  "category_id"
+    t.integer  "user_id"
+    t.integer  "quantity"
+    t.float    "price"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
+  end
+
+  add_index "items", ["category_id"], name: "index_items_on_category_id", using: :btree
+  add_index "items", ["user_id"], name: "index_items_on_user_id", using: :btree
 
   create_table "openauths", force: true do |t|
     t.string   "provider"
@@ -66,6 +94,13 @@ ActiveRecord::Schema.define(version: 20140802155341) do
   end
 
   add_index "users_roles", ["user_id", "role_id"], name: "index_users_roles_on_user_id_and_role_id", using: :btree
+
+  create_table "vendors", force: true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "versions", force: true do |t|
     t.string   "item_type",      null: false

@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   rolify
   has_paper_trail
+  has_many :items, dependent: :destroy
 
   # Include default devise modules. Others available are:
   # :lockable, :timeoutable and :omniauthable

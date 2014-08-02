@@ -30,8 +30,4 @@ class User < ActiveRecord::Base
       self.add_role :member
     end
   end
-
-  def admin?
-    self.has_role? :admin
-  end
 end

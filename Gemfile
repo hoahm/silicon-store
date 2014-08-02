@@ -64,3 +64,6 @@ gem 'devise', '3.2.4'
 
 # Momentjs
 gem 'momentjs-rails', '2.7.0'
+
+# Rails engine that provides an easy-to-use interface for managing your data
+gem 'rails_admin', '0.6.2'

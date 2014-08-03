@@ -14,9 +14,38 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require moment
+
+//-----------------------------
+// AngularJS -1.2.21
+//= require angular
+//= require angular-resource
+
+// Angular UI Router - 0.2.10
+//= require angular-ui-router
+
+// Angular UI Bootstrap - 0.11.0
+//= require angular-ui-bootstrap-tpls
+
+// Angular InfiniteScroll - 1.0.0
+//= require ng-infinite-scroll
+
+// Angular Moment - 0.7.1
+//= require angular-moment
+
+//-----------------------------
+// storeApp Specific JS Files
+//= require app/app
+//= require_tree ./app/controllers
+//= require_tree ./app/resources
+//= require_tree ./app/services
+//= require_tree ./app/filters
+//= require_tree ./config
+
+//-----------------------------
+// Vendor JS Files
 //= require bootstrap-datetimepicker
 //= require jquery.validate
 //= require common
 //= require users
-//= require turbolinks
+// require turbolinks
 // require_tree .

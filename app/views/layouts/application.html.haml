@@ -13,7 +13,7 @@
     /[if lt IE 9]
       = javascript_include_tag "ie/html5shiv.min.js"
       = javascript_include_tag "ie/respond.min.js"
-  %body
+  %body{"ng-app" => "storeApp"}
     .wrapper
       = render "layouts/header"
       .container-fluid.content-wrapper

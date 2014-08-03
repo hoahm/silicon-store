@@ -16,4 +16,11 @@ class Item < ActiveRecord::Base
   validates :quantity, presence: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
   validates :price, presence: true
   validates_attachment :photo, :content_type => { :content_type => ['image/jpeg', 'image/png', 'image/jpg'] }
+
+  def as_json(options = {})
+    json = super(options)
+    json[:photo_url] = photo.url
+    json[:thumb_url] = photo.url(:thumb)
+    json[:medium_url] = photo.url(:medium)
+  end
 end

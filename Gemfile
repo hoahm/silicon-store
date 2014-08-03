@@ -88,3 +88,6 @@ gem 'omniauth-facebook', '1.6.0'
 
 # Simple Rails app configuration
 gem "figaro", '0.7.0'
+
+# Paginator
+gem 'kaminari', '0.16.1'

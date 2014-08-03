@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby '2.1.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.4'
+gem 'rails', '4.1.0'
 
 # Use mysql as the database for Active Record
 gem 'mysql2'
@@ -91,3 +91,9 @@ gem "figaro", '0.7.0'
 
 # Paginator
 gem 'kaminari', '0.16.1'
+
+# I18n translations on the Javascript
+gem 'i18n-js', '2.1.2'
+
+# Js-routes
+gem 'js-routes', '0.9.0'

@@ -21,5 +21,6 @@ module SiliconStore
     # config.i18n.default_locale = :de
 
     config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
+    config.assets.initialize_on_precompile = true
   end
 end

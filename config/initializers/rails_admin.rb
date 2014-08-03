@@ -107,9 +107,13 @@ RailsAdmin.config do |config|
       field :description, :ck_editor do
         label I18n.t(".rails_admin.model.item.description")
       end
+      field :vendor do
+        label I18n.t(".rails_admin.model.item.vendor")
+      end
       field :category
       field :quantity
       field :price
+      field :photo
     end
   end
 end

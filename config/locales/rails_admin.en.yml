@@ -13,3 +13,4 @@ en:
       item:
         name : "Product's name"
         description: "Product's description"
+        vendor: "Manufacturer"

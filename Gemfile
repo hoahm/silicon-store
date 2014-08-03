@@ -79,3 +79,6 @@ gem 'paper_trail', '3.0.3'
 
 # Easy file attachment management
 gem 'paperclip', '4.2.0'
+
+# Ckeditor integration gem for rails
+gem 'ckeditor', '4.1.0'

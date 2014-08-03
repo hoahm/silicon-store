@@ -16,3 +16,5 @@
 /tmp
 /public/assets
 .keep
+# Ignore application configuration
+/config/application.yml

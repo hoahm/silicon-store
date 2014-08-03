@@ -1,5 +1,6 @@
 if User.count == 0
   admin = User.create(first_name: "Super", last_name: "Admin", email: "admin@example.com", date_of_birth: "1990-03-09", password: "12345678")
+  admin.remove_role :member
   admin.add_role :admin
 
   users = User.create([

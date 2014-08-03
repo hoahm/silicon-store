@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140803075846) do
+ActiveRecord::Schema.define(version: 20140803084557) do
 
   create_table "categories", force: true do |t|
     t.string   "name"
@@ -97,6 +97,7 @@ ActiveRecord::Schema.define(version: 20140803075846) do
     t.string   "last_name"
     t.datetime "date_of_birth"
     t.string   "mobile"
+    t.string   "unconfirmed_email"
   end
 
   add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree

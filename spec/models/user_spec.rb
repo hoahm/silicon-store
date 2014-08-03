@@ -8,7 +8,7 @@ RSpec.describe User, :type => :model do
   context "Validations" do
     it { should validate_presence_of(:first_name) }
     it { should validate_presence_of(:last_name) }
-    it { should validate_presence_of(:date_of_birth) }
+    it { should_not validate_presence_of(:date_of_birth) }
     it { should_not validate_presence_of(:mobile) }
     it { should allow_value(nil).for(:mobile) }
     it { should validate_uniqueness_of(:mobile) }
@@ -29,8 +29,8 @@ RSpec.describe User, :type => :model do
       expect(FactoryGirl.build(:user, last_name: nil)).to be_invalid
     end
 
-    it "is invalid without date of birth" do
-      expect(FactoryGirl.build(:user, date_of_birth: nil)).to be_invalid
+    it "is valid without date of birth" do
+      expect(FactoryGirl.build(:user, date_of_birth: nil)).to be_valid
     end
 
     it "allow mobile field is nil" do

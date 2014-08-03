@@ -16,39 +16,19 @@ RSpec.describe ProductsController, :type => :controller do
     end
   end
 
-  describe "GET create" do
-    it "returns http success" do
-      get :create
-      expect(response).to be_success
-    end
+  describe "POST create" do
   end
 
   describe "GET edit" do
-    it "returns http success" do
-      get :edit
-      expect(response).to be_success
-    end
   end
 
-  describe "GET update" do
-    it "returns http success" do
-      get :update
-      expect(response).to be_success
-    end
+  describe "PUT update" do
   end
 
   describe "GET show" do
-    it "returns http success" do
-      get :show
-      expect(response).to be_success
-    end
   end
 
-  describe "GET destroy" do
-    it "returns http success" do
-      get :destroy
-      expect(response).to be_success
-    end
+  describe "DELETE destroy" do
   end
 
 end

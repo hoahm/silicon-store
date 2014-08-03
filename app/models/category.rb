@@ -1,6 +1,6 @@
 class Category < ActiveRecord::Base
   has_paper_trail
-  belongs_to :vendor
+  has_many :items
 
   validates :name, presence: true
 end

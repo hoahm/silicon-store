@@ -11,16 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140803075844) do
+ActiveRecord::Schema.define(version: 20140803075846) do
 
   create_table "categories", force: true do |t|
     t.string   "name"
-    t.integer  "vendor_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  add_index "categories", ["vendor_id"], name: "index_categories_on_vendor_id", using: :btree
 
   create_table "ckeditor_assets", force: true do |t|
     t.string   "data_file_name",               null: false
@@ -52,10 +49,12 @@ ActiveRecord::Schema.define(version: 20140803075844) do
     t.string   "photo_content_type"
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
+    t.integer  "vendor_id"
   end
 
   add_index "items", ["category_id"], name: "index_items_on_category_id", using: :btree
   add_index "items", ["user_id"], name: "index_items_on_user_id", using: :btree
+  add_index "items", ["vendor_id"], name: "index_items_on_vendor_id", using: :btree
 
   create_table "openauths", force: true do |t|
     t.string   "provider"

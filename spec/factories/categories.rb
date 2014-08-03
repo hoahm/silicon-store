@@ -3,6 +3,5 @@
 FactoryGirl.define do
   factory :category do |f|
     f.name { Faker::Commerce.department(1, true) }
-    f.vendor nil
   end
 end

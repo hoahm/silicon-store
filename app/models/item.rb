@@ -1,6 +1,7 @@
 class Item < ActiveRecord::Base
   has_paper_trail
   belongs_to :category
+  belongs_to :vendor
   belongs_to :user
 
   has_attached_file :photo,

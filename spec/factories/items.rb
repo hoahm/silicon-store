@@ -9,5 +9,6 @@ FactoryGirl.define do
     f.user nil
     f.quantity (0..100).to_a.sample
     f.price { Faker::Commerce.price }
+    f.vendor nil
   end
 end

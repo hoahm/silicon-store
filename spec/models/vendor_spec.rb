@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Vendor, :type => :model do
   describe "Associations" do
-    it { should have_many(:categories) }
+    it { should have_many(:items) }
   end
 
   describe "Validations" do

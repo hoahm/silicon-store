@@ -4,6 +4,7 @@ RSpec.describe Item, :type => :model do
   context "Associations" do
     it { should belong_to(:category) }
     it { should belong_to(:user) }
+    it { should belong_to(:vendor) }
     it { should have_attached_file(:photo) }
   end
 

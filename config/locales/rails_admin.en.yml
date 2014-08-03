@@ -1,0 +1,15 @@
+en:
+  rails_admin:
+    navigation:
+      products_management: "Products Management"
+      products: "Products"
+      manufacturers: "Manufacturers"
+      users_management: "Users Management"
+    model:
+      vendor:
+        name: "Manufacturer's name"
+        description: "Description"
+        description_help: "Add vendor manufacturers' description here"
+      item:
+        name : "Product's name"
+        description: "Product's description"

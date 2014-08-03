@@ -9,7 +9,7 @@ class Openauth < ActiveRecord::Base
   def self.find_for_oauth(auth)
     openauth = find_by(provider: auth.provider, uid: auth.uid)
     if openauth.nil?
-      openauth = create(provider: auth.provider, uid: auth.uid)
+      openauth = create(provider: auth.provider, uid: auth.uid, link: auth.link)
     end
     openauth
   end

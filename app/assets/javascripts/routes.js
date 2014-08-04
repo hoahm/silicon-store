@@ -257,6 +257,16 @@
   if (!options){ options = {}; }
   return Utils.build_path([], ["format"], [2,[2,[2,[2,[7,"/",false],[6,"auth",false]],[7,"/",false]],[6,"cancel",false]],[1,[2,[8,".",false],[3,"format",false]],false]], arguments);
   },
+// categories => /categories(.:format)
+  categories_path: function(options) {
+  if (!options){ options = {}; }
+  return Utils.build_path([], ["format"], [2,[2,[7,"/",false],[6,"categories",false]],[1,[2,[8,".",false],[3,"format",false]],false]], arguments);
+  },
+// category => /categories/:id(.:format)
+  category_path: function(_id, options) {
+  if (!options){ options = {}; }
+  return Utils.build_path(["id"], ["format"], [2,[2,[2,[2,[7,"/",false],[6,"categories",false]],[7,"/",false]],[3,"id",false]],[1,[2,[8,".",false],[3,"format",false]],false]], arguments);
+  },
 // ckeditor.pictures => /ckeditor/pictures(.:format)
   ckeditor_pictures_path: function(options) {
   if (!options){ options = {}; }
@@ -282,6 +292,11 @@
   if (!options){ options = {}; }
   return Utils.build_path([], ["format"], [2,[2,[2,[2,[7,"/",false],[6,"auth",false]],[7,"/",false]],[6,"sign_out",false]],[1,[2,[8,".",false],[3,"format",false]],false]], arguments);
   },
+// edit_category => /categories/:id/edit(.:format)
+  edit_category_path: function(_id, options) {
+  if (!options){ options = {}; }
+  return Utils.build_path(["id"], ["format"], [2,[2,[2,[2,[2,[2,[7,"/",false],[6,"categories",false]],[7,"/",false]],[3,"id",false]],[7,"/",false]],[6,"edit",false]],[1,[2,[8,".",false],[3,"format",false]],false]], arguments);
+  },
 // edit_product => /products/:id/edit(.:format)
   edit_product_path: function(_id, options) {
   if (!options){ options = {}; }
@@ -301,6 +316,11 @@
   home_index_path: function(options) {
   if (!options){ options = {}; }
   return Utils.build_path([], ["format"], [2,[2,[2,[2,[7,"/",false],[6,"home",false]],[7,"/",false]],[6,"index",false]],[1,[2,[8,".",false],[3,"format",false]],false]], arguments);
+  },
+// new_category => /categories/new(.:format)
+  new_category_path: function(options) {
+  if (!options){ options = {}; }
+  return Utils.build_path([], ["format"], [2,[2,[2,[2,[7,"/",false],[6,"categories",false]],[7,"/",false]],[6,"new",false]],[1,[2,[8,".",false],[3,"format",false]],false]], arguments);
   },
 // new_product => /products/new(.:format)
   new_product_path: function(options) {
@@ -411,6 +431,11 @@
   rails_info_routes_path: function(options) {
   if (!options){ options = {}; }
   return Utils.build_path([], ["format"], [2,[2,[2,[2,[2,[2,[7,"/",false],[6,"rails",false]],[7,"/",false]],[6,"info",false]],[7,"/",false]],[6,"routes",false]],[1,[2,[8,".",false],[3,"format",false]],false]], arguments);
+  },
+// rails_mailers => /rails/mailers(.:format)
+  rails_mailers_path: function(options) {
+  if (!options){ options = {}; }
+  return Utils.build_path([], ["format"], [2,[2,[2,[2,[7,"/",false],[6,"rails",false]],[7,"/",false]],[6,"mailers",false]],[1,[2,[8,".",false],[3,"format",false]],false]], arguments);
   },
 // root => /
   root_path: function(options) {

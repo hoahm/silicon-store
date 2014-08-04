@@ -13,11 +13,20 @@ header {
   color: #fff !important;
   a, a:visited {
     color: #fff !important;
+    text-transform: uppercase;
+  }
+  ul {
+    li.active {
+      a {
+        background: #4a4a4a !important;
+      }
+    }
   }
   ul.dropdown-menu {
     li {
       a, a:visited {
         color: #777 !important;
+        text-transform: uppercase;
       }
     }
   }
@@ -45,7 +54,7 @@ footer {
   position: relative;
 }
 .content-wrapper {
-  padding-top: 50px;
+  padding-top: 70px;
   padding-bottom: 60px;
   position: relative;
   min-height: 100%;
@@ -68,4 +77,52 @@ ul.custom-error {
 .error {
   color: #a94442;
   font-weight: normal;
+}
+
+.hero-feature{
+  margin-bottom: 30px
+}
+
+.link-p{
+  display: block;
+  min-height: 250px;
+  height: auto;
+  width: 100%;
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.first-p{
+  min-height: 169px;
+}
+.prod-caption{
+  background: #fbfbfb;
+  border-top: 1px solid #ddd;
+}
+.prod-caption h4{
+  font-size: 16px;
+  height: 26px;
+  overflow: hidden;
+}
+span.title{
+  display: block;
+  font-size: 20px;
+  border-bottom: 3px solid #eee;
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: #4c7ed3;
+}
+.list-categ a{
+  font-family: 'DroidSansRegular';
+  background: #fbfbfb;
+  -ms-transition: all 100ms ease-in-out 0s ;
+  -moz-transition: all 100ms ease-in-out 0s ;
+  -webkit-transition: all 100ms ease-in-out 0s ;
+  -o-transition: all 100ms ease-in-out 0s ;
+  transition: all 100ms ease-in-out 0s ;
+}
+.list-categ a:hover{
+  background: #fff;
+  color: #428bca;
 }

@@ -6,7 +6,7 @@ class Item < ActiveRecord::Base
 
   has_attached_file :photo,
     :styles => {
-      :medium => "300x300>",
+      :medium => "280x280>",
       :thumb => "100x100>"
     },
     :default_url => "/images/:style/missing.png"
@@ -22,5 +22,6 @@ class Item < ActiveRecord::Base
     json[:photo_url] = photo.url
     json[:thumb_url] = photo.url(:thumb)
     json[:medium_url] = photo.url(:medium)
+    json
   end
 end

@@ -48,6 +48,7 @@
 // Vendor JS Files
 //= require bootstrap-datetimepicker
 //= require jquery.validate
+//= require jquery.bxslider
 //= require common
 //= require users
 // require turbolinks

@@ -1,1 +1,11 @@
 en:
+  layouts:
+    header:
+      home: "Home"
+      products: "Products"
+      about: "About"
+      contact: "Contact"
+  home:
+    categories: "CATEGORIES"
+    products: "PRODUCTS"
+    buy: "Buy"

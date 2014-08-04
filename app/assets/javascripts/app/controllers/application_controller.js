@@ -3,6 +3,7 @@ var scope ={};
 var ApplicationController = function($scope, $http, $modal, ApplicationService){
 
   $http.defaults.headers.post["Content-Type"] = "application/json";
+
   scope = $scope;
 
   ApplicationService.initializeScope($scope);

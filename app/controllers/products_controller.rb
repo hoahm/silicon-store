@@ -12,7 +12,7 @@ class ProductsController < ApplicationController
       format.json {
         render json: {
           products: render_product_json(json_data[:products]),
-          page: json_data[:page],
+          page: page,
           total_pages: json_data[:products].total_pages
         }
       }
@@ -87,7 +87,8 @@ class ProductsController < ApplicationController
           vendor: {
             except: [:created_at, :updated_at]
           }
-        }
+        },
+        except: [:created_at, :updated_at]
       )
     end
 end

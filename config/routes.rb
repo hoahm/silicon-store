@@ -10,6 +10,7 @@ SiliconStore::Application.routes.draw do
   path: :auth
 
   resources :products
+  resources :categories
 
   root "home#index"
 end

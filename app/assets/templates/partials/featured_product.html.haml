@@ -1,0 +1,16 @@
+.col-lg-3.visible-lg
+  .row.text-center
+    .col-lg-12.col-md-12.hero-feature
+      .thumbnail
+        %a.link-p
+          %img( ng-src = "{{ featureProduct.medium_url }}")
+        .caption.prod-caption
+          %h4
+            %a
+              {{ featureProduct.name | ng_trim:true:26:' ...'}}
+          .btn-group
+            %a.btn.btn-default
+              {{ featureProduct.price | currency:'VND ' }}
+            %a.btn.btn-primary
+              %i.fa.fa-shopping-cart
+                = I18n.t(".home.buy")

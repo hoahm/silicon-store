@@ -1,0 +1,22 @@
+%div{"ng-include" => "'/assets/partials/category.html.haml'"}
+
+.col-lg-9.col-md-9.col-sm-12
+  .col-lg-12.col-sm-12
+    %span.title
+      = I18n.t("home.products")
+  .col-lg-4.col-sm-4.hero-feature.text-center{"ng-repeat" => "product in products"}
+    .thumbnail
+      %a.link-p
+        %img( ng-src = "{{ product.medium_url }}")
+      .caption.prod-caption
+        %h4
+          %a
+            {{ product.name | ng_trim:true:26:' ...'}}
+        %p
+          {{ product.description | ng_trim:true:30:' ...' }}
+        .btn-group
+          %a.btn.btn-default
+            {{ product.price | currency:'VND ' }}
+          %a.btn.btn-primary
+            %i.fa.fa-shopping-cart
+              = I18n.t(".home.buy")

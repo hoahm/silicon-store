@@ -12,26 +12,11 @@
         %li.active
           = link_to "Home", root_path
         %li
-          %a{href: "#about"} About
+          = link_to t(".products"), products_path
         %li
-          %a{href: "#contact"} Contact
-        %li.dropdown
-          %a.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
-            Dropdown
-            %span.caret
-          %ul.dropdown-menu{role: "menu"}
-            %li
-              %a{href: "#"} Action
-            %li
-              %a{href: "#"} Another action
-            %li
-              %a{href: "#"} Something else here
-            %li.divider
-            %li.dropdown-header Nav header
-            %li
-              %a{href: "#"} Separated link
-            %li
-              %a{href: "#"} One more separated link
+          = link_to t(".about"), "/about"
+        %li
+          = link_to t(".contact"), "/contact"
       %ul.nav.navbar-nav.navbar-right
         - if user_signed_in?
           %li.dropdown
@@ -45,7 +30,7 @@
                 = link_to t("common.sign_out"), destroy_user_session_path, class: 'navbar-link', target: "_self", method: :delete
         - else
           %li
-            = link_to t("common.sign_up"), new_user_registration_path
+            = link_to t("common.sign_up"), new_user_registration_path, target: "_self"
           %li
-            = link_to t("common.sign_in"), new_user_session_path
+            = link_to t("common.sign_in"), new_user_session_path, target: "_self"
     / /.nav-collapse

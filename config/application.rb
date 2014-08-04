@@ -22,5 +22,6 @@ module SiliconStore
 
     config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
     config.assets.initialize_on_precompile = true
+    Rails.application.assets.register_engine('.haml', Tilt::HamlTemplate)
   end
 end

@@ -104,7 +104,7 @@ RailsAdmin.config do |config|
         label I18n.t(".rails_admin.model.item.name")
       end
       field :sku
-      field :description, :ck_editor do
+      field :description do
         label I18n.t(".rails_admin.model.item.description")
       end
       field :vendor do

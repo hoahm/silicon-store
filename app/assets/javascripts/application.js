@@ -17,6 +17,7 @@
 //= require i18n/translations
 //= require js-routes
 //= require moment
+//= require socket.io
 
 //-----------------------------
 // AngularJS -1.2.21

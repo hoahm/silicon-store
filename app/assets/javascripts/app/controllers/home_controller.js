@@ -12,6 +12,7 @@ var HomeController = function($scope, $http, $location, $state, $stateParams, $f
     ProductService.loadSliser();
     ProductService.getProducts();
     ProductService.loadFeatureProduct();
+    ProductService.syncRealTime();
   };
 
 };

@@ -97,3 +97,5 @@ gem 'i18n-js', '2.1.2'
 
 # Js-routes
 gem 'js-routes', '0.9.0'
+
+gem 'redis', '3.1.0'

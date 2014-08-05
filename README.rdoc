@@ -1,19 +1,33 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
 * Ruby version
+2.1.1
+
+* Technical Stack
+- Rails: 4.1.0
+- Devise 3.2.4
+- Omniauth-facebook 1.6.0
+- Cancan 1.6.10
+- Rolify 3.0.3
+- Figaro 0.7.0
+- rails_admin 0.6.2
+- momentjs-rails 2.7.0
+- kaminari 0.16.1
+- redis 3.1.0
+- AngularJS
+- socket.io
 
 * System dependencies
+None
 
 * Configuration
 
 * Database creation
+rake db:create RAILS_ENV=production
+rake db:migrate RAILS_ENV=production
 
 * Database initialization
+rake db:seed RAILS_ENV=production
 
 * How to run the test suite
 
@@ -21,8 +35,13 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+- Step 1: Generate translation.js
+rake i18n:js:export
 
+- Step 2: Generate routes.js
+rake js:routes
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+- Step 3: Clear cache and precompile assets
+rake tmp:cache:clear
+rake assets:clean RAILS_ENV=production
+rake assets:precompile RAILS_ENV=production

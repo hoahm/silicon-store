@@ -2,7 +2,7 @@
 
 var Category = function($resource){
 
-  return $resource(Routes.category_path(":id", {format: 'json'}), {
+  return $resource("/categories/:id.json", {
     id: "@id"
   }, {
     update: {

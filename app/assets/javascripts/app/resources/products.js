@@ -2,7 +2,7 @@
 
 var Product = function($resource){
 
-  return $resource(Routes.product_path(":id", {format: 'json'}), {
+  return $resource("/products/:id.json", {
     id: "@id"
   }, {
     update: {

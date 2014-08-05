@@ -10,7 +10,7 @@ var CategoryService = function($rootScope, $http, $location, $state, $stateParam
   };
 
   this.getCategories = function(){
-    $http.get(Routes.categories_path({format: 'json'}),
+    $http.get('/categories.json',
       {}
     )
     .success(function(response){

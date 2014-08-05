@@ -15,7 +15,7 @@
 //= require bootstrap
 //= require i18n
 //= require i18n/translations
-//= require js-routes
+// require js-routes
 //= require moment
 
 //-----------------------------
@@ -34,6 +34,9 @@
 
 // Angular Moment - 0.7.1
 //= require angular-moment
+
+
+//= require faye
 
 //-----------------------------
 // storeApp Specific JS Files

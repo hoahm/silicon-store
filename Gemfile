@@ -96,4 +96,7 @@ gem 'kaminari', '0.16.1'
 gem 'i18n-js', '2.1.2'
 
 # Js-routes
-gem 'js-routes', '0.9.0'
+# gem 'js-routes', '0.9.0'
+
+gem 'faye-rails'
+gem 'thin'

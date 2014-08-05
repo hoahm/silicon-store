@@ -19,7 +19,7 @@ var storeRouteConfig = function($stateProvider, $urlRouterProvider){
     })
 
     .state("products", {
-      url: Routes.products_path(),
+      url: "/products",
       views: {
         "": {
           controller: "ProductsController",
@@ -28,7 +28,7 @@ var storeRouteConfig = function($stateProvider, $urlRouterProvider){
       }
     })
     .state("new_product", {
-      url: Routes.new_product_path(),
+      url: "/products/new",
       views: {
         "": {
           controller: "ProductsController",
@@ -37,7 +37,7 @@ var storeRouteConfig = function($stateProvider, $urlRouterProvider){
       }
     })
     .state("edit_product", {
-      url: Routes.edit_product_path(":id"),
+      url: "/products/:id/edit",
       views: {
         "": {
           controller: "ProductsController",
@@ -46,7 +46,7 @@ var storeRouteConfig = function($stateProvider, $urlRouterProvider){
       }
     })
     .state("product", {
-      url: Routes.product_path(":id"),
+      url: "/products/:id",
       views: {
         "": {
           controller: "ProductsController",

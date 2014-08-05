@@ -12,7 +12,7 @@ var ProductService = function($rootScope, $http, $location, $state, $stateParams
   };
 
   this.getProducts = function(){
-    $http.get(Routes.products_path({format: 'json'}),
+    $http.get('/products.json',
       {
         page: scope.page
       }

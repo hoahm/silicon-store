@@ -18,6 +18,13 @@
 //= require js-routes
 //= require moment
 
+// require require
+//-----------------------------
+//= require underscore
+
+//= require socket.io
+
+
 //-----------------------------
 // AngularJS -1.2.21
 //= require angular
@@ -43,6 +50,9 @@
 //= require_tree ./app/services
 //= require_tree ./app/filters
 //= require_tree ./config
+
+
+//= require realtime
 
 //-----------------------------
 // Vendor JS Files

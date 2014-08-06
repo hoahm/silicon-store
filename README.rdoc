@@ -1,43 +1,62 @@
-## README
+Silicon Store demo app
+======================
+__Silicon_Store__ project is a very simple demo realtime web application, written in _Ruby_on_Rails_, _Redis_, using _AngularJS_ and _NodeJS_.
 
-## Technical Stack
-  * Ruby version
-    2.1.1
+### Features
+  * Sign in, sign up with Facebook
+  * Single Page using AngularJS
+  * Using Redis server for Pub/Sub
 
-  * Gem
-    - Rails: 4.1.0
-    - Devise 3.2.4
-    - Omniauth-facebook 1.6.0
-    - Cancan 1.6.10
-    - Rolify 3.0.3
-    - Figaro 0.7.0
-    - rails_admin 0.6.2
-    - momentjs-rails 2.7.0
-    - kaminari 0.16.1
-    - redis 3.1.0
-    - AngularJS
-    - socket.io
+### Demo
+[Demo here](http://silicon-store.herokuapp.com/)
 
-  * Database creation
+[NodeJS (socket for realtime - port 3001)](http://silicon-store-server.herokuapp.com)
+
+[API Document](http://siliconstore.apiary-proxy.com)
+
+### Technical Stacks
+#### Ruby
+Ruby: 2.1.1
+
+#### Gems
+  * Rails: 4.1.0
+  * Devise: 3.2.4
+  * Omniauth-facebook: 1.6.0
+  * Cancan: 1.6.10
+  * Rolify: 3.0.3
+  * Figaro: 0.7.0
+  * Rails_admin: 0.6.2
+  * Momentjs-rails: 2.7.0
+  * Kaminari 0.16.1
+  * Redis: 3.1.0
+
+#### Library
+  * AngularJS: 1.2.21
+  * Socket.IO: 0.9.11
+  * NodeJS: 0.10.26
+
+### Deployment instructions
+##### Create database
 
     rake db:create RAILS_ENV=production
-    rake db:migrate RAILS_ENV=production
 
-  * Database initialization
+##### Migrate database
+    rake db:create RAILS_ENV=production
+
+##### Seed data
 
     rake db:seed RAILS_ENV=production
 
-### Deployment instructions
-
-  Step 1: Generate translation.js
-
-    rake i18n:js:export
-
-  Step 2: Generate routes.js
+##### Generate translation.js
 
     rake js:routes
 
-  Step 3: Clear cache and precompile assets
+
+##### Generate routes.js
+
+    rake js:routes
+
+##### Clear cache and precompile assets
 
     rake tmp:cache:clear
     rake assets:clean RAILS_ENV=production

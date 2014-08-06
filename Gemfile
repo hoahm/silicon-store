@@ -99,3 +99,7 @@ gem 'i18n-js', '2.1.2'
 gem 'js-routes', '0.9.0'
 
 gem 'redis', '3.1.0'
+
+group :production do
+  gem 'rails_12factor'
+end

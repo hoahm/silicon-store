@@ -1,19 +1,18 @@
 class ProductsController < ApplicationController
   before_filter :load_product, only: [:show, :edit, :update, :destroy]
-  PER_PAGE = 10
 
   def index
     authorize! :read, Item
     page = (params[:page] || 1).to_i
-    json_data = product_service.list(page, PER_PAGE)
+    products = product_service.list(page)
 
     respond_to do |format|
       format.html
       format.json {
         render json: {
-          products: render_product_json(json_data[:products]),
+          products: render_product_json(products),
           page: page,
-          total_pages: json_data[:products].total_pages
+          total_pages: products.total_pages
         }
       }
     end
@@ -24,12 +23,12 @@ class ProductsController < ApplicationController
 
   def create
     authorize! :add, Item
-    json_data[:product] = product_service.create(product_params)
+    product = product_service.create(product_params)
 
-    if json_data[:story].errors.empty?
-      render json: render_product_json(json_data[:product]), status: :created
+    if story.errors.empty?
+      render json: render_product_json(product), status: :created
     else
-      render json: json_data[:product].errors, status: :unprocessable_entity
+      render json: product.errors, status: :unprocessable_entity
     end
   end
 
@@ -38,12 +37,12 @@ class ProductsController < ApplicationController
 
   def update
     authorize! :edit, @product
-    json_data = product_service.update(@product, product_params)
+    product = product_service.update(@product, product_params)
 
-    if json_data[:product].errors.empty?
-      render json: render_product_json(json_data[:product]), status: :ok
+    if product.errors.empty?
+      render json: render_product_json(product), status: :ok
     else
-      render json: json_data[:product].errors, status: :unprocessable_entity
+      render json: product.errors, status: :unprocessable_entity
     end
   end
 
@@ -62,7 +61,7 @@ class ProductsController < ApplicationController
     authorize! :delete, @product
     @product.destroy
 
-    render json: {}, status: :ok
+    render json: {}, status: :no_content
   end
 
   private

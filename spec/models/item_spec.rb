@@ -18,7 +18,7 @@ RSpec.describe Item, :type => :model do
 
     it "has correct photo style geometry" do
       expect(Item.attachment_definitions[:photo][:styles][:thumb]).to eq("100x100>")
-      expect(Item.attachment_definitions[:photo][:styles][:medium]).to eq("300x300>")
+      expect(Item.attachment_definitions[:photo][:styles][:medium]).to eq("280x280>")
     end
   end
 end

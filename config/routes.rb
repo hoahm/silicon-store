@@ -11,6 +11,7 @@ SiliconStore::Application.routes.draw do
 
   resources :products
   resources :categories
+  resources :vendors
 
   root "home#index"
 end

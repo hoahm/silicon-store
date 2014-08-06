@@ -13,7 +13,7 @@ var storeRouteConfig = function($stateProvider, $urlRouterProvider){
       views: {
         "": {
           controller: "HomeController",
-          templateUrl: "/assets/home/index.html.haml"
+          templateUrl: "<%= asset_path('home/index.html.haml') %>"
         }
       }
     })
@@ -23,7 +23,7 @@ var storeRouteConfig = function($stateProvider, $urlRouterProvider){
       views: {
         "": {
           controller: "ProductsController",
-          templateUrl: "/assets/products/index.html.haml"
+          templateUrl: "<%= asset_path('products/index.html.haml') %>"
         }
       }
     })
@@ -32,7 +32,7 @@ var storeRouteConfig = function($stateProvider, $urlRouterProvider){
       views: {
         "": {
           controller: "ProductsController",
-          templateUrl: "/assets/products/new.html.haml"
+          templateUrl: "<%= asset_path('products/new.html.haml') %>"
         }
       }
     })
@@ -41,7 +41,7 @@ var storeRouteConfig = function($stateProvider, $urlRouterProvider){
       views: {
         "": {
           controller: "ProductsController",
-          templateUrl: "/assets/products/edit.html.haml"
+          templateUrl: "<%= asset_path('products/edit.html.haml') %>"
         }
       }
     })
@@ -50,7 +50,7 @@ var storeRouteConfig = function($stateProvider, $urlRouterProvider){
       views: {
         "": {
           controller: "ProductsController",
-          templateUrl: "/assets/products/show.html.haml"
+          templateUrl: "<%= asset_path('products/show.html.haml') %>"
         }
       }
     });

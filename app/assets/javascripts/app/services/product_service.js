@@ -44,7 +44,7 @@ var ProductService = function($rootScope, $http, $location, $state, $stateParams
   };
 
   this.syncRealTime = function(){
-    var socket = io.connect('http://silicon-store-server.herokuapp.com:3001/');
+    var socket = io.connect('http://silicon-store-server.herokuapp.com:49307/');
 
     socket.on('message', function (response) {
       var data = JSON.parse(response);

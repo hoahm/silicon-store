@@ -50,6 +50,7 @@
 //= require bootstrap-datetimepicker
 //= require jquery.validate
 //= require jquery.bxslider
+//= require jquery.bootstrap-touchspin
 //= require common
 //= require users
 // require turbolinks

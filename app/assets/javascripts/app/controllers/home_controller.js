@@ -4,15 +4,19 @@ var HomeController = function($scope, $http, $location, $state, $stateParams, $f
 
   $controller('ApplicationController', { $scope: $scope, $http: $http });
 
-  ProductService.initializeScope($scope);
   CategoryService.initializeScope($scope);
+  ProductService.initializeScope($scope);
+  ProductService.syncRealTime();
 
   if ($state.current.name === "/"){
     CategoryService.getCategories();
     ProductService.loadSliser();
     ProductService.getProducts();
     ProductService.loadFeatureProduct();
-    ProductService.syncRealTime();
+  };
+
+  $scope.filterProduct = function(self){
+    ProductService.filterProduct(self);
   };
 
 };

@@ -9,3 +9,7 @@ en:
     categories: "CATEGORIES"
     products: "PRODUCTS"
     buy: "Buy"
+  products:
+    quantity_items_in_stock: "%{count} items in stock"
+    add_to_cart: "Add to cart"
+

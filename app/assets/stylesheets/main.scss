@@ -11,6 +11,7 @@ body {
 header {
   background: #00AADF !important;
   color: #fff !important;
+  z-index: 99999 !important;
   a, a:visited {
     color: #fff !important;
     text-transform: uppercase;
@@ -125,4 +126,47 @@ span.title{
 .list-categ a:hover{
   background: #fff;
   color: #428bca;
+}
+.sp-wrap {
+    display:none;
+    line-height:0;
+    font-size:0;
+    background:#eee;
+    position:relative;
+    margin:0 25px 15px 0;
+    border: 1px solid #E4E4E4;
+    float:left;
+}
+.sp-large {
+    position:relative;
+    overflow:hidden;
+  a {
+    display:inline-block;
+    img {
+      max-width:100%;
+      height:auto;
+      cursor: -webkit-zoom-in;
+    cursor: -moz-zoom-in;
+    }
+  }
+}
+.sp-thumbs {
+  width:100%;
+  text-align:left;
+}
+.sp-thumbs img {
+  width:50px;
+  height:50px;
+}
+.sp-thumbs a:link, .sp-thumbs a:visited {
+  border:2px solid #eee;
+  display:inline-block;
+}
+.sp-thumbs a:hover, .sp-thumbs a:active, .sp-current {
+  border:2px solid #555!important;
+}
+.input-qty-detail .bootstrap-touchspin{
+  float: left;
+  margin-right: 5px;
+  width: 130px;
 }

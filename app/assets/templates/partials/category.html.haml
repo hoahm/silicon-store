@@ -3,5 +3,5 @@
     %span.title
       = I18n.t("home.categories")
   .list-group.list-categ
-    %a.list-group-item{"ng-repeat" => "category in categories"}
+    %a.list-group-item{"ng-repeat" => "category in categories", "ng-click" => "filterProduct(this)"}
       {{category.name}}

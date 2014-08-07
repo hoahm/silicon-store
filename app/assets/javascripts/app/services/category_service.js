@@ -10,15 +10,24 @@ var CategoryService = function($rootScope, $http, $location, $state, $stateParam
   };
 
   this.getCategories = function(){
-    $http.get(Routes.categories_path({format: 'json'}),
-      {}
-    )
-    .success(function(response){
-      scope.categories = response;
-    })
-    .error(function(response, status){
-      // Handler error
-    });
+    if (localStorage.getItem("categories") != null && localStorage.getItem("categories") != "undefined"){
+      var categories = JSON.parse(localStorage.getItem("categories"));
+      scope.categories = categories;
+    }
+
+    if ($.isEmptyObject(scope.categories)){
+      $http.get(Routes.categories_path({format: 'json'}),
+        {}
+      )
+      .success(function(response){
+        scope.categories = response;
+        localStorage.setItem("categories", JSON.stringify(response));
+      })
+      .error(function(response, status){
+        // Handler error
+      });
+    }
+
   };
 
 };

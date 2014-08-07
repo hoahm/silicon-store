@@ -4,24 +4,29 @@ var ProductsController = function($scope, $http, $location, $state, $stateParams
 
   $controller('ApplicationController', { $scope: $scope, $http: $http });
 
-  ProductService.initializeScope($scope);
   CategoryService.initializeScope($scope);
+  ProductService.initializeScope($scope);
+  CategoryService.getCategories();
+  ProductService.syncRealTime();
 
   if ($state.current.name === "products"){
-    CategoryService.getCategories();
     ProductService.getProducts();
   };
 
   if ($state.current.name === "new_product"){
-    console.log("new_product");
+
   };
 
   if ($state.current.name === "edit_product"){
-    console.log("edit_product");
+
   };
 
   if ($state.current.name === "product"){
-    console.log("product");
+    ProductService.getProduct();
+  };
+
+  $scope.filterProduct = function(self){
+    ProductService.filterProduct(self);
   };
 
 };

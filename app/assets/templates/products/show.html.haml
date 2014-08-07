@@ -1,0 +1,26 @@
+%div{"ng-include" => "'/assets/partials/category.html.haml'"}
+
+.col-lg-9.col-md-9.col-sm-12
+  .col-lg-12.col-sm-12
+    %span.title
+      {{ product.name }}
+  .col-lg-12.col-sm-12.hero-feature
+    .sp-wrap{ style: "display: inline-block;"}
+      .sp-large
+        %a( ng-href = '{{ product.medium_url }}' )
+          %img( ng-src = '{{ product.medium_url }}' )
+    %h4
+      {{ product.name }}
+    = I18n.t("products.quantity_items_in_stock", count: '{{product.quantity}}')
+    %hr
+    {{ product.description }}
+    %hr
+    %div
+    %h3
+      {{ product.price | currency:'VND ' }}
+    .input-qty-detail
+      %input.form-control.input-qty.text-center{ type: "text", value: 1 }
+      %button.btn.btn-primary.pull-left
+        = I18n.t(".products.add_to_cart")
+    %br
+    %hr

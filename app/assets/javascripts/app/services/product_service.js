@@ -9,6 +9,7 @@ var ProductService = function($rootScope, $http, $location, $state, $stateParams
     scope.products = {};
     scope.page = 1;
     scope.totalPages = 1;
+    scope.search = {};
   };
 
   this.getProducts = function(){
@@ -44,20 +45,26 @@ var ProductService = function($rootScope, $http, $location, $state, $stateParams
   };
 
   this.syncRealTime = function(){
-    var socket = io.connect('http://silicon-store-server.herokuapp.com');
+    var socket = io.connect('http://silicon-store-server.herokuapp.com:80');
 
     socket.on('message', function (response) {
       var data = JSON.parse(response);
 
       if (data.state == "created"){
-        scope.products.push(data);
-        console.log("created");
+        if (angular.isArray(scope.products)){
+          scope.products.push(data);
+        }
       } else if (data.state == "update") {
-        scope.products.forEach(function(product, index){
-          if (product.id == data.id) {
-            scope.products[index] = data;
-          }
-        });
+        if (angular.isArray(scope.products)){
+          scope.products.forEach(function(product, index){
+            if (product.id == data.id) {
+              scope.products[index] = data;
+            }
+          });
+        }
+        if (angular.isDefined(scope.product) && scope.product.id == data.id){
+          scope.product = data;
+        }
       } else if (data.state == "destroy") {
         scope.products.forEach(function(product, index){
           if (product.id == data.id) {
@@ -68,13 +75,20 @@ var ProductService = function($rootScope, $http, $location, $state, $stateParams
     });
   };
 
-  function findProduct(productObject){
-    scope.products.forEach(function(product, index){
-      if (product.id == productObject.id) {
-        return index;
+  this.getProduct = function(){
+    Product.get({
+      id: $stateParams['id']
+    }, function(response){
+      scope.product = response;
+      if ($('.input-qty').length > 0){
+        $('.input-qty').TouchSpin();
       }
     });
-  }
+  };
+
+  this.filterProduct = function(scopeObject){
+    scope.search.category = scopeObject.category.id;
+  };
 
 };
 

@@ -12,4 +12,8 @@ class ApplicationController < ActionController::Base
       redirect_to main_app.root_url
     end
   end
+
+  def after_sign_in_path_for(resource)
+     rails_admin_path if resource.is_admin?
+  end
 end

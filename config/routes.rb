@@ -5,6 +5,7 @@ SiliconStore::Application.routes.draw do
 
   devise_for :users, controllers: {
     registrations: :registrations,
+    passwords: :passwords,
     omniauth_callbacks: :omniauth_callbacks
   },
   path: :auth

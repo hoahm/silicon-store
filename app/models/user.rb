@@ -38,7 +38,6 @@ class User < ActiveRecord::Base
 
  def self.find_for_oauth(auth, signed_in_resource = nil)
     openauth = Openauth.find_for_oauth(auth)
-
     user = openauth.user ? openauth.user : signed_in_resource
 
     if user.nil?
@@ -66,5 +65,9 @@ class User < ActiveRecord::Base
     end
 
     user
+  end
+
+  def facebook_link
+    %{<a href="#{self.openauths.facebook.first.link}">#{self.full_name}</a>}.html_safe if self.openauths.facebook.first
   end
 end

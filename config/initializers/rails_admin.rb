@@ -44,6 +44,7 @@ RailsAdmin.config do |config|
       field :date_of_birth do
         strftime_format "%d/%m/%Y"
       end
+      field :facebook_link
     end
 
     edit do

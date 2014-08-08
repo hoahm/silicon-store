@@ -258,6 +258,5 @@ Devise.setup do |config|
   config.omniauth :facebook,
     ENV['facebook_app_id'],
     ENV['facebook_app_secret'],
-    scope: 'email, user_photos, user_relationships, publish_actions, user_birthday, read_stream, user_friends, public_profile, user_likes',
-    display: 'popup'
+    scope: 'email, user_photos, user_relationships, publish_actions, user_birthday, read_stream, user_friends, public_profile, user_likes'
 end

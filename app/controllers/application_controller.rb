@@ -14,6 +14,10 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(resource)
-     rails_admin_path if resource.is_admin?
+    if resource.is_admin?
+      rails_admin_path
+    else
+      root_path
+    end
   end
 end

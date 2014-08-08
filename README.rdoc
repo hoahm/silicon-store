@@ -1,21 +1,25 @@
-Silicon Store demo app
-======================
+# Silicon Store demo app
+
 __Silicon_Store__ project is a very simple demo realtime web application, written in _Ruby_on_Rails_, _Redis_, using _AngularJS_ and _NodeJS_.
 
 ### Features
   * Sign in, sign up with Facebook
   * Single Page using AngularJS
   * Using Redis server for Pub/Sub
+  * ...
 
 ### Demo
 [Demo here](http://silicon-store.herokuapp.com/)
+Admin: admin@example.com / 12345678
 
-[NodeJS (socket for realtime - port 3001)](http://silicon-store-server.herokuapp.com)
+[NodeJS (web socket for realtime)](http://silicon-store-server.herokuapp.com)
 
 [API Document](http://siliconstore.apiary-proxy.com)
 
 ### Technical Stacks
+
 #### Ruby
+
 Ruby: 2.1.1
 
 #### Gems
@@ -36,6 +40,7 @@ Ruby: 2.1.1
   * NodeJS: 0.10.26
 
 ### Deployment instructions
+
 ##### Create database
 
     rake db:create RAILS_ENV=production
